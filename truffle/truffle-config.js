@@ -35,6 +35,7 @@ module.exports = {
    */
 
   networks: {
+
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache, geth, or parity) in a separate terminal
@@ -74,6 +75,17 @@ module.exports = {
     //   network_id: 2111,   // This network is yours, in the cloud.
     //   production: true    // Treats this network as if it was a public net. (default: false)
     // }
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*", // match any network
+      websockets: true
+    },
+    live: {
+      host: "178.25.19.88", // Random IP for example purposes (do not use)
+      port: 80,
+      network_id: 1,        // Ethereum public network
+    }
   },
 
   // Set default mocha options here, use special reporters, etc.
